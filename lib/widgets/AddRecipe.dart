@@ -141,8 +141,13 @@ class _AddRecipeState extends State<AddRecipe> {
                         _dificuldade = newValue!;
                       });
                     },
-                    items: <String>['Fácil', 'Médio', 'Difícil']
-                        .map<DropdownMenuItem<String>>((String value) {
+                    items: <String>[
+                      'Muito Fácil',
+                      'Fácil',
+                      'Média',
+                      'Difícil',
+                      'Muito Difícil'
+                    ].map<DropdownMenuItem<String>>((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
                         child: Text(value),
@@ -182,7 +187,7 @@ class _AddRecipeState extends State<AddRecipe> {
               onPressed: () {
                 addRecipe();
               },
-              child: Text('Adicionar'),
+              child: Text('Publicar Receita'),
             ),
           ],
         ),
