@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
     return FirebaseFirestore.instance
         .collection('receitas')
         .orderBy('data', descending: true)
-        .limit(3)
+        .limit(5)
         .snapshots()
         .map((snapshot) => snapshot.docs);
   }
